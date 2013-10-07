@@ -1,0 +1,143 @@
+.no-padding {
+  padding: 0; }
+
+.full-width {
+  width: 100%; }
+
+.bold {
+  font-weight: bold; }
+
+.white {
+  color: rgba(255, 255, 255, 0.9); }
+
+.gray {
+  color: rgba(150, 150, 150, 0.9);
+  text-shadow: 0 1px 1px white; }
+
+.text-shadow {
+  text-shadow: 0 1px 1px rgba(150, 150, 150, 0.9); }
+
+.make-col-md-6 {
+  position: relative;
+  padding-right: 5; }
+  @media (min-width: 992px) {
+    .make-col-md-6 {
+      float: left;
+      width: 66.66667%; } }
+
+.make-col-md-1 {
+  position: relative;
+  padding-right: 5; }
+  @media (min-width: 992px) {
+    .make-col-md-1 {
+      float: left;
+      width: 11.11111%; } }
+
+#main_menu {
+  height: 50px; }
+  #main_menu .logo {
+    margin-top: 5px; }
+  #main_menu ul {
+    list-style-type: none;
+    display: inline;
+    padding-left: 0; }
+    #main_menu ul li {
+      display: inline;
+      line-height: 50px;
+      margin-right: 15px; }
+    #main_menu ul a {
+      color: rgba(200, 200, 200, 0.8); }
+  #main_menu a.active {
+    color: rgba(0, 0, 0, 0.9);
+    font-weight: 800;
+    text-decoration: underline; }
+  #main_menu .menu-span-label {
+    margin: 0 15px 0 10px; }
+
+#sub_menu {
+  height: 70px; }
+  #sub_menu .row {
+    margin-top: 25px; }
+  #sub_menu ul {
+    list-style-type: none;
+    display: inline;
+    padding-left: 0; }
+    #sub_menu ul li {
+      display: inline;
+      line-height: 0;
+      margin-right: 15px; }
+    #sub_menu ul a {
+      color: rgba(200, 200, 200, 0.8); }
+  #sub_menu .active a {
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 800;
+    background: rgba(150, 150, 150, 0.25);
+    border-radius: 2px; }
+  #sub_menu .active .active_arrow_up {
+    display: block; }
+  #sub_menu .launchpad.active_arrow_up {
+    left: 135px; }
+  #sub_menu .manager.active_arrow_up {
+    left: 80px; }
+  #sub_menu .analytics.active_arrow_up {
+    left: 200px; }
+  #sub_menu a {
+    padding: 5px 10px; }
+  #sub_menu .active_arrow_up {
+    width: 0px;
+    height: 0px;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid white;
+    box-shadow: inset 0 0 9px black;
+    position: absolute;
+    display: none;
+    top: 37px; }
+
+#main .fix-btn-width {
+  width: 130px; }
+#main .btn {
+  margin: 15px 5px; }
+#main .table-header-bg {
+  border-top: 1px solid rgba(150, 150, 150, 0.9);
+  border-bottom: 1px solid rgba(150, 150, 150, 0.9);
+  box-shadow: 0 0 1px rgba(150, 150, 150, 0.9); }
+  #main .table-header-bg .vertical-align {
+    height: 27px;
+    line-height: 27px; }
+#main #daily_achievements {
+  height: 252px; }
+#main #daily_achievement_list, #main #achievement_list {
+  max-height: 225px;
+  overflow: scroll; }
+#main .achievements-list-item-wrapper {
+  border-bottom: 1px solid rgba(150, 150, 150, 0.9); }
+#main .achievement-list-item div {
+  padding: 8px 0; }
+#main .achievement-list-item .status {
+  height: 75px;
+  cursor: pointer; }
+#main .achievement-list-item .status span {
+  margin-left: -12px; }
+#main .achievement-list-item .status-active {
+  background-color: #a3c822; }
+#main .achievement-list-item .status-paused {
+  background-color: #ef5f60; }
+#main .achievement-list-item .with-icon {
+  position: absolute;
+  left: 41%;
+  top: 26%; }
+#main .achievement-list-item .achivement-count {
+  font-size: 2em;
+  padding: 0; }
+
+#flash_message .message {
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-top: -10px;
+  background: #62c5f4; }
+#flash_message .message.success {
+  background-color: #62c5f4; }
+#flash_message .message.error {
+  background-color: #ef5f60; }

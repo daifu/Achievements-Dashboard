@@ -1,0 +1,232 @@
+// Default twitter bootstrap variables
+$screen-medium:992px;
+
+// Variables
+$main_menu_height:50px;
+$table_header_height: 27px;
+$achievement_item_height: 75px;
+
+$a_default_color: rgba(200,200,200,0.8);
+$a_active_light_bg: rgba(0,0,0,0.9);
+$sub_menu_a_bg: rgba(150,150,150,0.25);
+$a_active_dark_bg: rgba(255,255,255,0.9);
+
+$white_color: rgba(255,255,255,0.9);
+$white: white;
+$black: rgba(0,0,0,1);
+$dark_grey: rgba(150,150,150,0.9);
+$success_green: #a3c822;
+$success_blue: #62c5f4;
+$light_red: #ef5f60;
+
+// Common
+.no-padding {
+  padding: 0;
+}
+.full-width {
+  width: 100%;
+}
+.bold {
+  font-weight: bold;
+}
+.white {
+  color: $white_color;
+}
+.gray {
+  color: $dark_grey;
+  text-shadow: 0 1px 1px $white;
+}
+.text-shadow {
+  text-shadow: 0 1px 1px $dark-grey;
+}
+
+@mixin inline-list($line_height) {
+  ul {
+    list-style-type: none;
+    display: inline;
+    padding-left: 0;
+    li {
+      display: inline;
+      line-height: $line_height;
+      margin-right: 15px;
+    }
+    a {
+      color: $a_default_color;
+    }
+  }
+}
+
+@mixin arrow-up {
+  width: 0px;
+  height: 0px;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid $white;
+  box-shadow: inset 0 0 9px $black;
+}
+
+@mixin make-md-column($columns,$gutter) {
+  $grid-columns:9;
+  position: relative;
+  padding-right: $gutter/2;
+  @media (min-width: $screen-medium) {
+    float: left;
+    width: percentage(($columns / $grid-columns));
+  }
+}
+
+@mixin vertical-align-text($height) {
+  height: $height;
+  line-height: $height;
+}
+
+.make-col-md-6 {
+  @include make-md-column(6, 10);
+}
+.make-col-md-1 {
+  @include make-md-column(1, 10);
+}
+
+// Header
+#main_menu {
+  height: $main_menu_height;
+
+  .logo {
+    margin-top: 5px;
+  }
+
+  @include inline-list($main_menu_height);
+
+  a.active {
+    color: $a_active_light_bg;
+    font-weight: 800;
+    text-decoration: underline;
+  }
+
+  .menu-span-label {
+    margin: 0 15px 0 10px;
+  }
+}
+
+#sub_menu {
+  height: 70px;
+  .row {
+    margin-top: 25px;
+  }
+
+  @include inline-list(0);
+
+  .active a{
+    color: $a_active_dark_bg;
+    font-weight: 800;
+    background: $sub_menu_a_bg;
+    border-radius: 2px;
+  }
+
+  .active .active_arrow_up {
+    display: block;
+  }
+
+  .launchpad.active_arrow_up {
+    left: 135px;
+  }
+
+  .manager.active_arrow_up {
+    left: 80px;
+  }
+
+  .analytics.active_arrow_up {
+    left: 200px;
+  }
+
+  a {
+    padding: 5px 10px;
+  }
+
+  .active_arrow_up {
+    @include arrow-up;
+    position: absolute;
+    display: none;
+    top: 37px;
+  }
+}
+
+#main {
+  .fix-btn-width {
+    width: 130px;
+  }
+
+  .btn {
+    margin: 15px 5px;
+  }
+
+  .table-header-bg {
+    border-top: 1px solid $dark_grey;
+    border-bottom: 1px solid $dark_grey;
+    box-shadow: 0 0 1px $dark_grey;
+
+    .vertical-align {
+      @include vertical-align-text($table_header_height);
+    }
+  }
+
+  // daily achievement
+  #daily_achievements {
+    height: $achievement_item_height * 3 + $table_header_height;
+  }
+
+
+  #daily_achievement_list, #achievement_list {
+    max-height: $achievement_item_height * 3;
+    overflow: scroll;
+  }
+
+  .achievements-list-item-wrapper {
+    border-bottom: 1px solid $dark_grey;
+  }
+
+  .achievement-list-item {
+    div {
+      padding: 8px 0;
+    }
+    .status {
+      height: $achievement_item_height;
+      cursor: pointer;
+    }
+    .status span {
+      margin-left:-12px;
+    }
+    .status-active {
+      background-color: $success_green;
+    }
+    .status-paused {
+      background-color: $light_red;
+    }
+    .with-icon{
+      position:absolute;
+      left: 41%;
+      top: 26%;
+    }
+    .achivement-count {
+      font-size: 2em;
+      padding: 0;
+    }
+  }
+}
+
+// Message
+#flash_message {
+  .message {
+    color: $white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: -10px;
+    background: $success_blue;
+  }
+  .message.success {
+    background-color: $success_blue;
+  }
+  .message.error {
+    background-color: $light_red;
+  }
+}
