@@ -23,7 +23,7 @@ var app = app || {};
         options.crossDomain = true;
       }
       if (!options.xhrFields) {
-        options.xhrFields = {withCredentials:true};
+        options.xhrFields = {withCredentials:false};
       }
       return Backbone.sync(method, model, options);
     },
