@@ -112,16 +112,16 @@
 <div class="achievements-list-item-wrapper">
   <div class="container">
     <div class="row achievement-list-item no-margin">
-      <div class="make-col-md-6 text-left">
+      <div class="make-col-md-6 text-left bold large">
         <%= title %>
       </div>
       <div class="make-col-md-1 text-center">
-        <div class="achivement-count bold"><%= properties.goalCount %></div>
-        <%= properties.goalName %>
+        <div class="achivement-count light gray"><%= properties.goalCount %></div>
+        <span class="gray small"><%= properties.goalName.toUpperCase() %></span>
       </div>
       <div class="make-col-md-1 text-center">
-        <div class="achivement-count bold"><%= properties.rewardCount %></div>
-        <%= properties.rewardName %>
+        <div class="achivement-count light gray"><%= properties.rewardCount %></div>
+        <span class="gray small"><%= properties.rewardName.toUpperCase() %></span>
       </div>
       <% if(properties.active) {%>
         <%= status_template.active %>
@@ -135,12 +135,12 @@
 
   <script type="text/template" id="achievement_status_active_template">
     <div class="make-col-md-1 text-center status status-active">
-      <div class="with-icon sprites tick-icon"><br/><span class="white text-shadow">Active</span></div>
+      <div class="with-icon sprites tick-icon"><br/><span class="white text-shadow small">ACTIVE</span></div>
     </div>
   </script>
   <script type="text/template" id="achievement_status_paused_template">
     <div class="make-col-md-1 text-center status status-paused">
-      <div class="with-icon sprites paused-icon"><br/><span class="white text-shadow">Paused</span></div>
+      <div class="with-icon sprites paused-icon"><br/><span class="white text-shadow small">PAUSED</span></div>
     </div>
   </script>
 
