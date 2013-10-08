@@ -8,7 +8,7 @@ var app = app || {};
     initialize: function() {
       this.collection = app.Achievements.where({type: 'standard'});
       this.list_id    = 'achievement_list';
-      this.$el.html(this.template({list_div_id: this.list_id}));
+      this.$el.html(this.template({list_div_id: this.list_id, title: 'Achievements'}));
       this.render();
     }
   });

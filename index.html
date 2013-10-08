@@ -78,7 +78,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <button id="action_save" class="btn btn-success fix-btn-width pull-right" type="button">Save</button>
+        <button id="action_save" class="btn btn-success fix-btn-width pull-right success-green bg" type="button">Save</button>
         <button id="action_cancel" class="btn btn-default fix-btn-width pull-right" type="button">Cancel</button>
       </div>
     </div>
@@ -88,9 +88,9 @@
   <script type="text/template" id="daily_achievements_template">
 <div class="sprites_bg table-header-bg">
   <div class="container">
-    <div class="row">
+    <div class="row no-margin">
       <div class="make-col-md-6 gray vertical-align">
-        Daily Achievements
+        <%= title %>
       </div>
       <div class="goal make-col-md-1 text-center gray vertical-align">
         Goal
@@ -111,7 +111,7 @@
   <script type="text/template" id="daily_achievement_template">
 <div class="achievements-list-item-wrapper">
   <div class="container">
-    <div class="row achievement-list-item">
+    <div class="row achievement-list-item no-margin">
       <div class="make-col-md-6 text-left">
         <%= title %>
       </div>
@@ -156,6 +156,7 @@
   <script src="components/underscore/underscore-min.js"></script>
   <script src="components/backbone/backbone-min.js"></script>
   <script src="js/config.js"></script>
+  <script src="js/utilities.js"></script>
   <script src="js/jquery_extra_functions.js"></script>
   <script src="js/models/achievement.js"></script>
   <script src="js/collections/achievements.js"></script>

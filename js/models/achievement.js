@@ -6,6 +6,7 @@ var app = app || {};
 
   app.Achievement = Backbone.Model.extend({
     url: app.Config.postUrl,
+    //url: 'http://updates.html5rocks.com/',
     defaults: {
       title: "",
       type: "standard",
@@ -24,9 +25,11 @@ var app = app || {};
       if (!options.xhrFields) {
         options.xhrFields = {withCredentials:true};
       }
-      options['emulateHTTP'] = true;
-      options.timeout = 40000; // required, or the application won't pick up on 404 responses
       return Backbone.sync(method, model, options);
+    },
+    parse: function(response) {
+      console.log(response);
+      return response;
     }
   });
 })();
