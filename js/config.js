@@ -3,7 +3,7 @@
 var app = app || {};
 
 app.Config = {};
-app.Config.postUrl = 'http://frontend.challengeles.scopely.io/post';
+app.Config.postUrl = 'http://frontend.challenges.scopely.io/post';
 app.Config.getUrl  = '';
 app.Config.fakeJSON  = {
   "achievements":[

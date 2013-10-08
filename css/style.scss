@@ -55,6 +55,9 @@ $light_red: #ef5f60;
 .text-shadow {
   text-shadow: 0 1px 1px $dark-grey;
 }
+.hide {
+  display:none;
+}
 
 @mixin inline-list($line_height) {
   ul {

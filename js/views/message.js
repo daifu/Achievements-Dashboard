@@ -12,7 +12,8 @@ var app = app || {};
       this.render();
     },
     render: function() {
-      this.$el.html(this.template(this.toJSON()));
+      this.$el.hide();
+      this.$el.html(this.template(this.toJSON())).fadeIn(500);
       this.clearMessage();
     },
     toJSON: function() {
