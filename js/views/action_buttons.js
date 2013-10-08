@@ -24,7 +24,7 @@ var app = app || {};
     update_if_changed: function(model) {
       var that = this;
       if (model.hasChanged()) {
-        model.save({},{
+        model.save(model.toJSON(),{
           success: function() {
             new app.Message({type: 'success', content: 'Your changes have been updated.'});
             that.$btn.enableSave();
