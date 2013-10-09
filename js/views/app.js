@@ -9,8 +9,8 @@ var app = app || {};
       new app.MainMenuView();
       new app.SubMenuView();
       new app.ActionButtonsView();
-      new app.DailyAchievementsView({collection: app.Achievements});
-      new app.AchievementsView({collection: app.Achievements});
+      new app.DailyAchievementsView({collection: app.Achievements.where({type: 'daily'})});
+      new app.AchievementsView({collection: app.Achievements.where({type: 'standard'})});
     }
   });
 

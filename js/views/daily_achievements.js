@@ -7,7 +7,6 @@ var app = app || {};
     el: '#daily_achievements',
     template: _.template($('#daily_achievements_template').html()),
     initialize: function() {
-      this.collection = app.Achievements.where({type: 'daily'});
       this.list_id    = 'daily_achievement_list';
       this.$el.html(this.template({list_div_id: this.list_id, title: 'Daily Achievements'}));
       this.render();
