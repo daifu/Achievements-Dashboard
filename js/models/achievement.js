@@ -26,6 +26,11 @@ var app = app || {};
       if (response.IsSuccess) {
         return true;
       }
+    },
+    toggleActive: function() {
+      var properties = _.clone(this.get('properties'));
+      properties.active = !properties.active;
+      this.set('properties', properties);
     }
   });
 })();

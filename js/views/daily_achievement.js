@@ -21,9 +21,7 @@ var app = app || {};
       'click .status': "changeStatus"
     },
     changeStatus: function(e) {
-      var properties    = _.clone(this.model.get('properties'));
-      properties.active = !properties.active;
-      this.model.set('properties', properties);
+      this.model.toggleActive();
 
       // update the view
       var $div = $(e.target);

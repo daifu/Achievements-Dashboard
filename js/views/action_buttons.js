@@ -18,25 +18,16 @@ var app = app || {};
     update_achievements: function(e) {
       e.preventDefault();
       this.$btn = $(e.target);
-      app.Achievements.each(this.update_if_changed, this);
-    },
-    update_if_changed: function(model) {
       var that = this;
 
-      if (model.hasChanged()) {
-        that.$btn.disabledSave();
-        model.save(model.changed,{
-          success: function(resp) {
-            new app.Message({type: 'success', content: 'Your changes have been updated.'});
-            that.$btn.enableSave();
-          },
-          error: function() {
-            new app.Message({type: 'error', content: 'Error! It cannot save it.'});
-            that.$btn.enableSave();
-          },
-          wait: true
-        });
-      }
+      app.Achievements.update_if_changed({
+        beforeAjax: function() {
+          that.$btn.disabledSave();
+        },
+        afterAjax: function() {
+          that.$btn.enableSave();
+        }
+      });
     }
   });
 
