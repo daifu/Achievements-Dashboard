@@ -8,3 +8,4 @@ Scopely Front End Challenge
 3. Jasmine
 4. Twitter Bootsrap(Grid System and button)
 5. SCSS
+6. JQuery
